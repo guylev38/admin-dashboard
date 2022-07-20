@@ -1,4 +1,54 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap'); /* Sen */
+
+/* Global */
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Sen', sans-serif;
 }
+
+
+.content{
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: lightblue;
+    width: fit-content;
+    height: 100%;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upper{
+    display: flex;
+}
+
+.upper-left, .upper-right, .lower-right{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
