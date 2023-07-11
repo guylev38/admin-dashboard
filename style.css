@@ -1,0 +1,54 @@
+/* FONTS */
+@import url('node_modules/normalize.css/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins */
+
+/* VARIABLES */
+:root{
+  --dark-green: #064e3b;
+  --light-green: #10b981;
+}
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 2fr) 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header{
+  background-color: white;
+  grid-column: 2 / 6; 
+}
+
+.sidebar{
+  background-color: var(--light-green);
+  grid-row: 1 / 6;
+}
+
+.content{
+  background-color: orange;
+}
+
+footer{
+  background-color: var(--dark-green);
+  color: white;
+  grid-area: 6 / 1 / 6 / 7;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+a{
+  text-decoration: none;
+}
