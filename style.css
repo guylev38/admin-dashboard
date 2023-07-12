@@ -1,11 +1,11 @@
-/* FONTS */
-@import url('node_modules/normalize.css/normalize.css');
+@import url('node_modules/normalize.css/normalize.css'); /* normalize.css for default browser styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins */
 
 /* VARIABLES */
 :root{
-  --dark-green: #064e3b;
-  --light-green: #10b981;
+  --sidebar: #393e41;
+  --header: #e94f37;
+  --content: #f6f7eb;
 }
 
 
@@ -25,30 +25,31 @@ body{
 }
 
 .header{
-  background-color: white;
+  background-color: var(--header);
   grid-column: 2 / 6; 
 }
 
 .sidebar{
-  background-color: var(--light-green);
-  grid-row: 1 / 6;
+  background-color: var(--sidebar);
+  grid-row: 1 / 7;
 }
 
 .content{
-  background-color: orange;
+  background-color: var(--content);
+  grid-area: 2 / 2 / 6 / 6;
 }
 
 footer{
-  background-color: var(--dark-green);
-  color: white;
-  grid-area: 6 / 1 / 6 / 7;
+  background-color: var(--content);
+  grid-area: 6 / 2 / 6 / 7;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 15px;
 }
 
 a{
   text-decoration: none;
+  color: var(--header);
 }
