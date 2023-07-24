@@ -1,0 +1,274 @@
+@import url('node_modules/normalize.css/normalize.css'); /* normalize.css for default browser styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins */
+
+/* VARIABLES */
+:root{
+  --sidebar: #393e41;
+  --header: #c44536;
+  --content: #f6f7eb;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 2fr) 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header{
+  background-color: var(--header);
+  grid-column: 2 / 6; 
+}
+
+.header > *{
+  display: flex;
+  color: white;
+}
+
+.upper{
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-icon{
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.search {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.search div{
+  width: 55vw;
+  height: 30px;
+  background-color: #c95346;
+  border-radius: 20px;
+}
+
+.profile{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.profile img{
+  width: 50px;
+  height: 50px;
+  border-radius: 360px;
+}
+
+#bell-icon{
+  height: 30px;
+  width: 30px;
+  fill: white;
+}
+
+.lower{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.greeting{
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.greeting span{
+  font-size: 15px;
+}
+
+.greeting h2{
+  padding: 15px;
+}
+
+.greeting img{
+  width: 90px;
+  height: 90px;
+  border-radius: 360px;
+}
+
+.buttons{
+  display: flex;
+  margin-right: 20px;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.buttons > button{
+  padding: 10px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: var(--content);
+  border: none;
+}
+
+button:hover{
+  opacity: 90%;
+  cursor: pointer;
+}
+
+
+
+
+
+.sidebar{
+  background-color: var(--sidebar);
+  grid-row: 1 / 7;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+li{
+  list-style-type: none;
+  font-size: 24px;
+}
+
+#app-sections{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#app-misc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.sidebar p{
+  font-size: 15px;
+  margin-top: 400px;
+}
+
+.content{
+  background-color: var(--content);
+  grid-area: 2 / 2 / 7 / 7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 2fr) 1fr;
+  padding: 20px;
+}
+
+.announcements{
+  grid-area: 1 / 3 / 3 / 4; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.announcements h3{
+  text-align: center;
+}
+
+.announcements > div{
+  background-color: var(--content); 
+  box-shadow: 0px 0px 10px #656660;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: fit-content;
+}
+
+
+.trending{
+  grid-area: 3 / 3 / 5 /5;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.users{
+  background-color: var(--content); 
+  box-shadow: 0px 0px 10px #656660;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: fit-content;
+  width: 50%;
+  gap: 10px;
+}
+
+.users div{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.users > div > img{
+  width: 60px;
+  height: 60px;
+  border-radius: 360px;
+}
+
+  
+
+
+.cards{
+  display: grid;
+  grid-area: 1 / 1 / 5 / 3;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 20px;
+}
+
+.card{
+  width: 90%;
+  height: 90%;
+  background-color: var(--content); 
+  box-shadow: 0px 0px 10px #656660;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer{
+  background-color: var(--content);
+  grid-area: 6 / 2 / 6 / 7;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+a{
+  text-decoration: none;
+  /* color: var(--content); */
+  color: white;
+}
+
+a:hover{
+  text-decoration: underline;
+}
